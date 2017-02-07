@@ -20,16 +20,18 @@ namespace WpfApplication1
 
         Ellipse ellipse = new Ellipse();
 
-        public Balloon()
+        static Random rndGen = new Random();
+
+        public Balloon(Canvas canvas)
         {
+            diameter = rndGen.Next(10, 30);
+            x = rndGen.Next(10, 100);
+            y = rndGen.Next(10, 200);
+
             ellipse.Width = diameter;
             ellipse.Height = diameter;
             ellipse.Margin = new Thickness(x, y, 0, 0);
             ellipse.Stroke = new SolidColorBrush(Colors.Red);
-        }
-
-        public void DrawOnCanvas(Canvas canvas)
-        {
             canvas.Children.Add(ellipse);
         }
 

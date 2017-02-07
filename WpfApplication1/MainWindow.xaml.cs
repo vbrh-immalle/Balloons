@@ -28,13 +28,9 @@ namespace WpfApplication1
         {
             InitializeComponent();
 
-            b1 = new Balloon();
-            b2 = new Balloon();
-            b3 = new Balloon();
-
-            b1.DrawOnCanvas(canvas);
-            b2.DrawOnCanvas(canvas);
-            b3.DrawOnCanvas(canvas);
+            b1 = new Balloon(canvas);
+            b2 = new Balloon(canvas);
+            b3 = new Balloon(canvas);
         }
 
         private void growButton_Click(object sender, RoutedEventArgs e)
