@@ -20,31 +20,33 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
-        Balloon b1;
-        Balloon b2;
-        Balloon b3;
+        List<Balloon> balloons = new List<Balloon>();
 
         public MainWindow()
         {
             InitializeComponent();
 
-            b1 = new Balloon(canvas);
-            b2 = new Balloon(canvas);
-            b3 = new Balloon(canvas);
+            for(var i = 0; i<100; i++)
+            {
+                Balloon newBalloon = new Balloon(canvas);
+                balloons.Add(newBalloon);
+            }
         }
 
         private void growButton_Click(object sender, RoutedEventArgs e)
         {
-            b1.Grow();
-            b2.Grow();
-            b3.Grow();
+            foreach(var b in balloons)
+            {
+                b.Grow();
+            }
         }
 
         private void moveButton_Click(object sender, RoutedEventArgs e)
         {
-            b1.Move();
-            b2.Move();
-            b3.Move();
+            foreach (var b in balloons)
+            {
+                b.Move();
+            }
         }
     }
 }

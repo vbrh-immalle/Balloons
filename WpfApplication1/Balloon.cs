@@ -25,7 +25,7 @@ namespace WpfApplication1
         public Balloon(Canvas canvas)
         {
             diameter = rndGen.Next(10, 30);
-            x = rndGen.Next(10, 100);
+            x = rndGen.Next(10, 300);
             y = rndGen.Next(10, 200);
 
             ellipse.Width = diameter;
