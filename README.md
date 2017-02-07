@@ -9,5 +9,6 @@ features:
 
 TODO:
 
-- background color
+- achtergrondkleur
+- tekst
 - ...
