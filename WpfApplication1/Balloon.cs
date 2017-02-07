@@ -28,6 +28,29 @@ namespace WpfApplication1
             x = rndGen.Next(10, 300);
             y = rndGen.Next(10, 200);
 
+            UpdateEllipse(canvas);
+        }
+
+        public Balloon(Canvas canvas, int diameter)
+        {
+            this.diameter = diameter;
+            x = rndGen.Next(10, 300);
+            y = rndGen.Next(10, 200);
+
+            UpdateEllipse(canvas);
+        }
+
+        public Balloon(Canvas canvas, int diameter, int height)
+        {
+            this.diameter = diameter;
+            x = rndGen.Next(10, 300);
+            y = height;
+
+            UpdateEllipse(canvas);
+        }
+
+        void UpdateEllipse(Canvas canvas)
+        {
             ellipse.Width = diameter;
             ellipse.Height = diameter;
             ellipse.Margin = new Thickness(x, y, 0, 0);
