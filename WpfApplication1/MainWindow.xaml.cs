@@ -20,6 +20,7 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+        static Random rndGen = new Random();
         List<Balloon> balloons = new List<Balloon>();
 
         public MainWindow()
@@ -28,7 +29,13 @@ namespace WpfApplication1
 
             for(var i = 0; i<100; i++)
             {
-                Balloon newBalloon = new Balloon(canvas, 20, 100);
+                Balloon newBalloon = new Balloon(canvas, 
+                        rndGen.Next(10, 50), 
+                        rndGen.Next((int)canvas.Height),
+                        rndGen.Next((int)canvas.Width)
+                    );
+
+
                 balloons.Add(newBalloon);
             }
         }

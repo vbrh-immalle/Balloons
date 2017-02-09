@@ -9,7 +9,7 @@ features:
 
 TODO:
 
-[ ] verplaats random generator van Balloon naar MainWindow
+[x] verplaats random generator van Balloon naar MainWindow
 [ ] achtergrondkleur
 [ ] tekst
 [ ] maak properties:

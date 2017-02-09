@@ -15,35 +15,22 @@ namespace WpfApplication1
     class Balloon
     {
         private int x = 10;
-        private int y = 100;
+        private int y = 10;
         private int diameter = 10;
 
         Ellipse ellipse = new Ellipse();
 
-        static Random rndGen = new Random();
-
-        public Balloon(Canvas canvas)
-        {
-            diameter = rndGen.Next(10, 30);
-            x = rndGen.Next(10, 300);
-            y = rndGen.Next(10, 200);
-
-            UpdateEllipse(canvas);
-        }
-
         public Balloon(Canvas canvas, int diameter)
         {
             this.diameter = diameter;
-            x = rndGen.Next(10, 300);
-            y = rndGen.Next(10, 200);
 
             UpdateEllipse(canvas);
         }
 
-        public Balloon(Canvas canvas, int diameter, int height)
+        public Balloon(Canvas canvas, int diameter, int height, int xpos)
         {
             this.diameter = diameter;
-            x = rndGen.Next(10, 300);
+            x = xpos;
             y = height;
 
             UpdateEllipse(canvas);
