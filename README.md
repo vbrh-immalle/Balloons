@@ -12,7 +12,7 @@ TODO:
 - [x] verplaats random generator van `Balloon` naar `MainWindow`
 	- een `Balloon` zou eigenlijk niet zelf verantwoordelijk moeten zijn waar hij geplaatst wordt,
 	  de aanroeper (`MainWindow`) zou dit moeten beslissen
-- [ ] zorg dat oude ballonnen verdwijnen bij init
+- [x] zorg dat oude ballonnen verdwijnen bij init
 - [ ] achtergrondkleur
 	- elke ballon heeft een vaste achtergrondkleur
 - [ ] elke ballon heeft de tekst *Happy Birthday*

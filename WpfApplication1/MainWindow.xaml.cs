@@ -31,6 +31,7 @@ namespace WpfApplication1
 
         private void InitializeBalloons()
         {
+            canvas.Children.Clear();
             balloons.Clear();
             for(var i = 0; i<100; i++)
             {
