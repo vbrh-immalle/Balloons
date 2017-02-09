@@ -19,13 +19,14 @@ namespace WpfApplication1
         private int diameter = 10;
 
         Ellipse ellipse = new Ellipse();
+        Brush strokeBrush = Brushes.Red;
         Brush bgBrush = new LinearGradientBrush(Colors.Red, Colors.Pink, 90);
 
         public Balloon(Canvas canvas, int diameter)
         {
             this.diameter = diameter;
 
-            UpdateEllipse(canvas);
+            UpdateBalloon(canvas);
         }
 
         public Balloon(Canvas canvas, int diameter, int height, int xpos)
@@ -34,15 +35,19 @@ namespace WpfApplication1
             x = xpos;
             y = height;
 
-            UpdateEllipse(canvas);
+            UpdateBalloon(canvas);
         }
-
-        void UpdateEllipse(Canvas canvas)
+        
+        /*
+         * This method uses the class variables x, y and diameter
+         * to update the WPF-controls included in this class.
+         */
+        void UpdateBalloon(Canvas canvas)
         {
             ellipse.Width = diameter;
             ellipse.Height = diameter;
             ellipse.Margin = new Thickness(x, y, 0, 0);
-            ellipse.Stroke = new SolidColorBrush(Colors.Red);
+            ellipse.Stroke = strokeBrush;
             ellipse.Fill = bgBrush;
             canvas.Children.Add(ellipse);
         }
