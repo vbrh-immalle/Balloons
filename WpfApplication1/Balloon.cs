@@ -19,6 +19,7 @@ namespace WpfApplication1
         private int diameter = 10;
 
         Ellipse ellipse = new Ellipse();
+        Brush bgBrush = new LinearGradientBrush(Colors.Red, Colors.Pink, 90);
 
         public Balloon(Canvas canvas, int diameter)
         {
@@ -42,6 +43,7 @@ namespace WpfApplication1
             ellipse.Height = diameter;
             ellipse.Margin = new Thickness(x, y, 0, 0);
             ellipse.Stroke = new SolidColorBrush(Colors.Red);
+            ellipse.Fill = bgBrush;
             canvas.Children.Add(ellipse);
         }
 

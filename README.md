@@ -13,7 +13,7 @@ TODO:
 	- een `Balloon` zou eigenlijk niet zelf verantwoordelijk moeten zijn waar hij geplaatst wordt,
 	  de aanroeper (`MainWindow`) zou dit moeten beslissen
 - [x] zorg dat oude ballonnen verdwijnen bij init
-- [ ] achtergrondkleur
+- [x] achtergrondkleur
 	- elke ballon heeft een vaste achtergrondkleur
 - [ ] elke ballon heeft de tekst *Happy Birthday*
 	- als `Move()` of `Grow()` wordt aangeroepen, verplaatst het `TextBlock` mee
