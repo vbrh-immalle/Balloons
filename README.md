@@ -9,6 +9,11 @@ features:
 
 TODO:
 
-- achtergrondkleur
-- tekst
-- ...
+[ ] verplaats random generator van Balloon naar MainWindow
+[ ] achtergrondkleur
+[ ] tekst
+[ ] maak properties:
+	- X
+	- Y
+	- Diameter
+[ ] ...
