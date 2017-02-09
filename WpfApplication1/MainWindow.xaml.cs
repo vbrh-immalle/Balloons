@@ -31,8 +31,8 @@ namespace WpfApplication1
             {
                 Balloon newBalloon = new Balloon(canvas, 
                         rndGen.Next(10, 50), 
-                        rndGen.Next((int)canvas.Height),
-                        rndGen.Next((int)canvas.Width)
+                        rndGen.Next(300),
+                        rndGen.Next(300)
                     );
 
 

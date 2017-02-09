@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="233" Margin="205,40,0,0" VerticalAlignment="Top" Width="276"/>
-        <Button x:Name="growButton" Content="Button" HorizontalAlignment="Left" Margin="89,59,0,0" VerticalAlignment="Top" Width="75" Click="growButton_Click" />
-        <Button x:Name="moveButton" Content="Button" HorizontalAlignment="Left" Margin="89,100,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.206,-0.236" Click="moveButton_Click"/>
+        <Canvas x:Name="canvas" Margin="110,10,10,10" Background="#FFEEEEEE"/>
+        <Button x:Name="growButton" Content="Grow" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="growButton_Click" />
+        <Button x:Name="moveButton" Content="Move Up" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.206,-0.236" Click="moveButton_Click"/>
 
     </Grid>
 </Window>
