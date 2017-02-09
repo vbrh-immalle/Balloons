@@ -26,7 +26,12 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+            InitializeBalloons();
+        }
 
+        private void InitializeBalloons()
+        {
+            balloons.Clear();
             for(var i = 0; i<100; i++)
             {
                 Balloon newBalloon = new Balloon(canvas, 
@@ -34,10 +39,13 @@ namespace WpfApplication1
                         rndGen.Next(300),
                         rndGen.Next(300)
                     );
-
-
                 balloons.Add(newBalloon);
             }
+        }
+
+        private void initButton_Click(object sender, RoutedEventArgs e)
+        {
+            InitializeBalloons();
         }
 
         private void growButton_Click(object sender, RoutedEventArgs e)
