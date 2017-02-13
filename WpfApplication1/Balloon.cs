@@ -74,17 +74,6 @@ namespace WpfApplication1
             ellipse.Margin = new Thickness(x, y, 0, 0);
         }
 
-        public void SetBackground(Brush bg)
-        {
-            bgBrush = bg;
-            UpdateBalloon();
-        }
-
-        public Brush GetBackground()
-        {
-            return bgBrush;
-        }
-
         public Brush Background
         {
             get
