@@ -40,6 +40,12 @@ namespace WpfApplication1
                         rndGen.Next(300),
                         rndGen.Next(300)
                     );
+
+                if(i % 3 == 0)
+                {
+                    newBalloon.Background = Brushes.Blue;
+                }
+
                 balloons.Add(newBalloon);
             }
         }

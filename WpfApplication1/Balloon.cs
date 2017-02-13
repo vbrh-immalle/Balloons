@@ -29,7 +29,7 @@ namespace WpfApplication1
          * This method uses the class variables x, y and diameter
          * to update the WPF-controls included in this class.
          */
-        private void UpdateBalloon(Canvas canvas)
+        private void UpdateBalloon()
         {
             ellipse.Width = diameter;
             ellipse.Height = diameter;
@@ -57,7 +57,7 @@ namespace WpfApplication1
             x = xpos;
             y = height;
 
-            UpdateBalloon(canvas);
+            UpdateBalloon();
             canvas.Children.Add(ellipse);
         }
 
@@ -74,5 +74,28 @@ namespace WpfApplication1
             ellipse.Margin = new Thickness(x, y, 0, 0);
         }
 
+        public void SetBackground(Brush bg)
+        {
+            bgBrush = bg;
+            UpdateBalloon();
+        }
+
+        public Brush GetBackground()
+        {
+            return bgBrush;
+        }
+
+        public Brush Background
+        {
+            get
+            {
+                return bgBrush;
+            }
+            set
+            {
+                bgBrush = value;
+                UpdateBalloon();
+            }
+        }
     }
 }
